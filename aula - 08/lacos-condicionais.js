@@ -33,28 +33,39 @@ const prompt = require('readline-sync')
 
 //* exemplo 3
 
-const numeroSorteado = parseInt(Math.random() * 10)
+// const numeroSorteado = parseInt(Math.random() * 10)
 
-let numeroUsuario = Number(prompt.question('informe um numero entre 0 e 10: '))
+// let numeroUsuario = Number(prompt.question('informe um numero entre 0 e 10: '))
 
-while (numeroUsuario !== numeroSorteado) {
-  console.log('Você errou! Tente novamente.')
+// while (numeroUsuario !== numeroSorteado) {
+//   console.log('Você errou! Tente novamente.')
 
-  numeroUsuario = Number(prompt.question('informe um numero entre 0 e 10: '))
-}
+//   numeroUsuario = Number(prompt.question('informe um numero entre 0 e 10: '))
+// }
 
-console.log(`Parabéns! Você acertou! O numero era ${numeroSorteado}`)
+// console.log(`Parabéns! Você acertou! O numero era ${numeroSorteado}`)
 
-//loop com contador
+//* loop com contador
 
-let contador = 0
+// let contador = 0
 
-while (contador < 10) {
-  console.log(contador)
+// while (contador < 10) {
+//   console.log(contador)
 
-  if (contador === 5) {
-    break
-  }
+//   if (contador === 5) {
+//     break
+//   }
 
-  contador++
-}
+//   contador++
+// }
+
+//* do-while
+
+let saldo
+
+do {
+  saldo = Number(prompt.question("informe um saldo valido: "))
+} while (saldo < 0)
+
+
+console.log(`Seu saldo atual é: ${saldo}`)
